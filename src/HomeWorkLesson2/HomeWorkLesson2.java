@@ -202,5 +202,17 @@ public class HomeWorkLesson2 {
             }
         }
         System.out.println("Число симметричных повторений: " + result);
+
+        // Более изящно
+        int res1 = 0;
+        for(int h = 0; h <= 23; h++){
+            for(int m = 0; m<=59; m++){
+                if(h/10%10 == m%10 && h%10 == m/10%10){
+                    res1++;
+                    System.out.println(h/10%10+ "" + h%10 + ":" + m/10%10 + "" + m%10);
+                }
+            }
+        }
+        System.out.println("Всего " + res1);
     }
 }
