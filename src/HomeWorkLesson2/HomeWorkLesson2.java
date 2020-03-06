@@ -214,5 +214,7 @@ public class HomeWorkLesson2 {
             }
         }
         System.out.println("Всего " + res1);
+
+        //update --
     }
 }
