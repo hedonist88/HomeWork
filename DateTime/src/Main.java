@@ -18,7 +18,7 @@ public class Main {
         time = LocalDateTime.of(2020, Month.JUNE, 16, 19, 00);
         arrivalTime = setZone(time, route[0].getDateZone());
 
-        System.out.println("Время отправления " + formatter.format(arrivalTime));
+        System.out.println("Время отправления из города " + route[0].getName() + " " + formatter.format(arrivalTime));
 
         // Полетели
         for (Route r:route) {
@@ -50,3 +50,13 @@ public class Main {
     }
 
 }
+/* print out */
+/*
+    Время отправления из города Сидней 16 июня 2020 в 19:00
+    => Время прибытия в город Хьюстон 16 июня 2020 в 19:35
+    <= Время отправления из города Хьюстон 16 июня 2020 в 20:35
+    => Время прибытия в город Вашингтон 17 июня 2020 в 00:24
+    <= Время отправления из города Вашингтон 17 июня 2020 в 01:34
+    => Время прибытия в город Оттава 17 июня 2020 в 03:14
+    Время прибытия в конечный пункт 17 июня 2020 в 03:14
+*/
