@@ -1,6 +1,8 @@
 package fitness;
 
 import logger.Logger;
+import subscription.Day;
+import subscription.OneTime;
 import subscription.Subscription;
 import user.User;
 
@@ -115,7 +117,12 @@ public class Fitness {
                 // При первом посещение активием абонемент
                 if(s.getRegisterStart() == null) {
                     s.setRegisterStart(currTime.minusMinutes(1));
-                    s.setRegisterEnd(currTime.plusYears(1));
+                    // Fix OneTime Subscriptions
+                    if(s instanceof OneTime) {
+                        s.setRegisterEnd(LocalDateTime.of(currTime.getYear(),currTime.getMonth(),currTime.getDayOfMonth(),23,59));
+                    } else {
+                        s.setRegisterEnd(currTime.plusYears(1));
+                    }
                 } else {
                     s.setRegisterStart(currTime.minusMinutes(1));
                 }
