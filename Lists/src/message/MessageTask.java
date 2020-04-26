@@ -129,3 +129,101 @@ public class MessageTask {
 
 
 }
+
+/* out */
+/*
+=== Исходный список сообщений ===
+Message{code=1, priority=MEDIUM}
+Message{code=1, priority=HIGH}
+Message{code=6, priority=LOW}
+Message{code=3, priority=LOW}
+Message{code=9, priority=MEDIUM}
+Message{code=2, priority=HIGH}
+Message{code=6, priority=HIGH}
+Message{code=2, priority=MEDIUM}
+Message{code=4, priority=MEDIUM}
+Message{code=0, priority=HIGH}
+Message{code=7, priority=MEDIUM}
+Message{code=0, priority=URGENT}
+Message{code=9, priority=HIGH}
+Message{code=7, priority=MEDIUM}
+Message{code=6, priority=URGENT}
+Message{code=9, priority=HIGH}
+Message{code=7, priority=HIGH}
+Message{code=1, priority=LOW}
+Message{code=1, priority=LOW}
+Message{code=2, priority=HIGH}
+
+=== Количество сообщений для каждого приоритета ===
+LOW: 4
+MEDIUM: 6
+HIGH: 8
+URGENT: 2
+
+=== Количество сообщений для кода сообщения ===
+0: 2
+1: 4
+2: 3
+3: 1
+4: 1
+6: 3
+7: 3
+9: 3
+
+=== Количество уникальных сообщений ===
+Всего 16 уникальных сообщений:
+6: HIGH
+7: HIGH
+1: LOW
+9: HIGH
+2: HIGH
+0: HIGH
+1: HIGH
+2: MEDIUM
+1: MEDIUM
+6: URGENT
+3: LOW
+0: URGENT
+6: LOW
+9: MEDIUM
+7: MEDIUM
+4: MEDIUM
+
+=== Только неповторяющиеся сообщения в исходном порядке ===
+1: MEDIUM
+1: HIGH
+6: LOW
+3: LOW
+9: MEDIUM
+2: HIGH
+6: HIGH
+2: MEDIUM
+4: MEDIUM
+0: HIGH
+7: MEDIUM
+0: URGENT
+9: HIGH
+6: URGENT
+7: HIGH
+1: LOW
+
+=== Удаляем из коллекции каждое сообщение с приоритетом MEDIUM ===
+Message{code=1, priority=HIGH}
+Message{code=6, priority=LOW}
+Message{code=3, priority=LOW}
+Message{code=2, priority=HIGH}
+Message{code=6, priority=HIGH}
+Message{code=0, priority=HIGH}
+Message{code=0, priority=URGENT}
+Message{code=9, priority=HIGH}
+Message{code=6, priority=URGENT}
+Message{code=9, priority=HIGH}
+Message{code=7, priority=HIGH}
+Message{code=1, priority=LOW}
+Message{code=1, priority=LOW}
+Message{code=2, priority=HIGH}
+
+=== Удаляем из коллекции все сообщения, кроме приоритета URGENT ===
+Message{code=0, priority=URGENT}
+Message{code=6, priority=URGENT}
+ */
