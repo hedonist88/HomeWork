@@ -1,6 +1,6 @@
 # Домашние задания
 
-<p><a href="/hedonist88/HomeWork/tree/master/Enum">Enum</a></p>
-<p><a href="/hedonist88/HomeWork/tree/master/Exception">Исключения</a></p>
+<p><a href="/Enum/src">Enum</a></p>
+<p><a href="/Exception/src">Исключения</a></p>
 <p><a href="/Lists/src">Коллекции</a></p>
-<p><a href="/Maps">Карты</a></p>
+<p><a href="/Maps/src">Карты</a></p>
