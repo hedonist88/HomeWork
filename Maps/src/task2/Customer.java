@@ -1,3 +1,4 @@
+package task2;
 
 public class Customer {
     private String name;
@@ -56,7 +57,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "task2.Customer{" +
                 "name='" + name + '\'' +
                 ", uuid='" + uuid + '\'' +
                 ", age=" + age +
