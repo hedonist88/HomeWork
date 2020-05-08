@@ -68,12 +68,13 @@ public class MessageTask {
     private static void uniqueMessageCount(List<Message> messageList) {
         // TODO: Подсчитать количество уникальных сообщений
         //  Ответ в консоль
-        Set<Message> result = new HashSet<>();
+        Set<Message> result = new HashSet<>(messageList); // 27-04 более изящное решение, добавление коллекции в нгего
+        /*
         for(Message m:messageList){
             if(!result.contains(m)) {
                 result.add(m);
             }
-        }
+        }*/
         System.out.println("\n=== Количество уникальных сообщений ===");
         System.out.println("Всего " + result.size() + " уникальных сообщений:");
         for (Message m:result){
@@ -81,11 +82,14 @@ public class MessageTask {
         }
     }
 
-    public static List<Message> uniqueMessagesInOriginalOrder(List<Message> messageList){
+    public static Set<Message> uniqueMessagesInOriginalOrder(List<Message> messageList){
         // TODO: вернуть только неповторяющиеся сообщения и в том порядке,
         //  в котором они встретились в первоначальном списке
         //  Например, было: [{URGENT, 4}, {HIGH, 9}, {LOW, 3}, {HIGH, 9}]
         //  на выходе: [{URGENT, 4}, {HIGH, 9}, {LOW, 3}]
+
+        Set<Message> result = new LinkedHashSet<>(messageList); // 27-04 более изящное решение, добавление коллекции в нгего
+        /*
         Set<Message> checker = new HashSet<>();
         LinkedList<Message> result = new LinkedList<>();
         for(Message m:messageList){
@@ -93,7 +97,7 @@ public class MessageTask {
                 checker.add(m);
                 result.add(m);
             }
-        }
+        }*/
         return result;
     }
 

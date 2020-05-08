@@ -47,11 +47,10 @@ public class Task1 {
             try {
                 result.put(word, result.get(word) + 1);
             } catch (NullPointerException e){
-                result.put(word, 0);
-                result.put(word, result.get(word) + 1);
+                result.put(word, 1);
             }
-
         }
+        //result.put(word, result.get(word) + 1);
         return result;
     }
 

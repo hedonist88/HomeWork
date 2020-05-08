@@ -21,7 +21,7 @@ public class Employee implements Comparable<Employee> {
     }
 
     public static List<Employee> employeeGenerator(int num) {
-        List employees = new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
         if(num < 1) {
             employees.add(null);
             return employees;
